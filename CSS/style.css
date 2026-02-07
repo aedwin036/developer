@@ -57,19 +57,19 @@ html, body {
 
 /* FONDOS DESDE CSS */
 .bg-inicio {
-  background-image: url("/images/image1.webp");
+  background-image: url("../images/image1.webp");
 }
 
 .bg-sobre {
-  background-image: url("/images/image2.webp");
+  background-image: url("../images/image2.webp");
 }
 
 .bg-contacto {
-  background-image: url("/images/image3.webp");
+  background-image: url("../images/image3.webp");
 }
 
 .bg-blog {
-  background-image: url("/images/image4.webp");
+  background-image: url("../images/image4.webp");
 }
 
 /* Oscurecer fondo */
