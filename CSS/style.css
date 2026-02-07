@@ -242,7 +242,7 @@ button:hover {
     height: auto;
   }
   .titulo {
-    margin-top: 480px; /* Ajusta el margen superior en móviles */
+    margin-top: 500px; /* Ajusta el margen superior en móviles */
     font-size: 2rem;
     color: white;
   }
