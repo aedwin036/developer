@@ -313,7 +313,7 @@ button:hover {
     font-size: 2.5rem; /* Reduce aún más el tamaño del título en móviles pequeños */
   }
    .titulo {
-    margin-top: 480px; /* Ajusta el margen superior en móviles */
+    margin-top: 550px; /* Ajusta el margen superior en móviles */
     font-size: 2rem;
     color: white;
    }
