@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nav con cambio de imagen</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <style>
+      /* Estilos específicos para el formulario de WhatsApp */
+      #contacto {
+        flex-direction: column; /* Alinea h1 y formulario verticalmente */
+      }
+      #contacto h1 {
+        position: relative; /* Quita la posición absoluta global */
+        top: auto;
+        margin-bottom: 20px; /* Espacio entre título y formulario */
+      }
+      #formWhatsApp {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        position: relative; /* Asegura que el formulario esté sobre el fondo */
+        z-index: 10;
+      }
+      #formWhatsApp input,
+      #formWhatsApp textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+      }
+      #formWhatsApp button {
+        padding: 12px;
+        background-color: #25d366; /* Color WhatsApp */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      #formWhatsApp button:hover {
+        background-color: #128c7e;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="navbar">
+      <button data-section="inicio">Inicio</button>
+      <button data-section="sobre">Sobre mí</button>
+      <button data-section="contacto">Contacto</button>
+      <button data-section="blog">Blog</button>
+    </nav>
+
+    <main>
+      <section id="inicio" class="section bg-inicio active">
+        <!-- Banner Izquierdo -->
+        <div id="banner-left" class="banner-half">
+          <div class="banner-slide slide-1 active"></div>
+          <div class="banner-slide slide-2"></div>
+          <div class="banner-slide slide-3"></div>
+          <div class="banner-slide slide-4"></div>
+          <div class="banner-slide slide-6"></div>
+          <button class="banner-btn prev">&#10094;</button>
+          <button class="banner-btn next">&#10095;</button>
+        </div>
+        <!-- Banner Derecho -->
+        <div id="banner-right" class="banner-half">
+          <div class="banner-slide slide-2 active"></div>
+          <div class="banner-slide slide-3"></div>
+          <div class="banner-slide slide-4"></div>
+          <div class="banner-slide slide-5"></div>
+          <button class="banner-btn prev">&#10094;</button>
+          <button class="banner-btn next">&#10095;</button>
+        </div>
+        <!--sobre mi-->
+        <h1 class="titulo">Developer Frontend Junior</h1>
+      </section>
+
+      <!-- habilidades -->
+      <section id="sobre" class="section bg-sobre">
+        <h1>Sobre mí</h1>
+        <p>
+          Soy una persona apasionada por la programación y el desarrollo web,
+          enfocada en crear interfaces modernas, funcionales y fáciles de usar.
+          Trabajo con <b>HTML, CSS y JavaScript</b>, desarrollando sitios web
+          responsivos y dinámicos, cuidando tanto el diseño como la estructura
+          del código.<br />
+          Tengo experiencia implementando navegación interactiva, cambios de
+          contenido sin recargar la página, manejo de imágenes como fondos
+          dinámicos y diseños tipo landing o aplicaciones web.<br />
+          Me gusta trabajar con código limpio, bien organizado y orientado a una
+          buena experiencia de usuario. Soy autodidacto, constante y siempre
+          dispuesto a aprender, con un enfoque práctico en resolver problemas y
+          construir soluciones reales que aporten valor a cada proyecto.
+        </p>
+      </section>
+      <!--fomulario-->
+      <section id="contacto" class="section bg-contacto">
+        <h1>Contáctame</h1>
+        <form id="formWhatsApp">
+          <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre completo"
+            required
+          />
+          <input
+            type="email"
+            id="correo"
+            placeholder="Correo electrónico"
+            required
+          />
+          <textarea
+            id="mensaje"
+            rows="4"
+            placeholder="Describe el tipo de diseño web que necesitas"
+            required
+          ></textarea>
+          <button type="submit">Enviar a WhatsApp</button>
+        </form>
+      </section>
+
+      <section id="blog" class="section bg-blog">
+        <section class="container">
+          <div class="card">
+            <img src="images/html.webp" alt="imagen izquierda" />
+            <h3>html , css y javascript</h3>
+            <p class="texto">
+              Cuento con conocimientos en HTML5, CSS3 y JavaScript,
+              desarrollando interfaces web estructuradas, responsivas e
+              interactivas. Me enfoco en crear diseños limpios, funcionales y
+              una buena experiencia de usuario.
+            </p>
+          </div>
+          <div class="card">
+            <img src="images/responsive.webp" alt="imagen centro" />
+            <h3>Diseño responsivo</h3>
+            <p class="texto">
+              Creo interfaces web que se adaptan a cualquier dispositivo,
+              garantizando una experiencia de usuario óptima tanto en móviles
+              como en escritorio. Utilizo técnicas de diseño flexible y media
+              queries para lograr una visualización perfecta en todos los
+              tamaños de pantalla.
+            </p>
+          </div>
+          <div class="card">
+            <img src="images/web.webp" alt="imagen derecha" />
+            <h3>web developer</h3>
+            <p class="texto">
+              Soy desarrollador web junior con conocimientos en HTML, CSS y
+              JavaScript. Creo sitios web básicos, responsivos y funcionales,
+              enfocados en un diseño limpio y una buena experiencia de usuario.
+              Me encuentro en constante aprendizaje y motivado por seguir
+              mejorando mis habilidades a través de proyectos prácticos.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

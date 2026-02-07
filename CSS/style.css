@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 🚫 elimina scroll */
+  font-family: Arial, sans-serif;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: rgba(0,0,0,0.85);
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* SECCIONES */
+.section {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  display: none;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  align-items: center;
+  justify-content: center;
+  color: rgb(24, 10, 10);
+  text-align: center;
+}
+
+/* SECCIÓN ACTIVA */
+.section.active {
+  display: flex;
+}
+
+/* FONDOS DESDE CSS */
+.bg-inicio {
+  background-image: url("/images/image1.webp");
+}
+
+.bg-sobre {
+  background-image: url("/images/image2.webp");
+}
+
+.bg-contacto {
+  background-image: url("/images/image3.webp");
+}
+
+.bg-blog {
+  background-image: url("/images/image4.webp");
+}
+
+/* Oscurecer fondo */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.45);
+}
+
+.section h1 {
+  position: absolute;
+  z-index: 100;
+  font-size: 4rem;
+  top: 23%;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+.contacto {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.contacto h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contacto p {
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+button {
+  padding: 12px;
+  background: #25D366;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1ebe5d;
+}
+
+/* ESTILOS PARA LOS BANNERS (SLIDERS) */
+#inicio {
+  flex-direction: row;
+  align-items: stretch;
+  padding: 30px; /* Margen para ver el fondo */
+  gap: 30px; /* Separación entre banners */
+}
+
+.banner-half {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Borde redondeado estético */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombra para resaltar */
+}
+
+.banner-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.banner-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Imágenes de fondo para los slides */
+.slide-1 { background-image: url('../images/fronted1.webp'); }
+.slide-2 { background-image: url('../images/fronted2.webp'); }
+.slide-3 { background-image: url('../images/developer.png'); }
+.slide-4 { background-image: url('../images/developer2.png'); }
+.slide-5 { background-image: url('../images/developer3.png'); }
+.slide-6 { background-image: url('../images/fronted3.png'); }
+
+.titulo {
+  text-align: center;     /* centra el texto */
+  margin-top: 250px;       /* lo baja */
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px;
+}
+.card {
+  width: 50%;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 250px
+}
+.card h3 {
+  margin: 15px 0 5px;
+  font-size: 22px;
+}
+.texto {
+  color: aliceblue;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Para pantallas de hasta 768px (móviles y tablets) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto; /* Habilita scroll vertical */
+    overflow-x: hidden; /* Evita scroll horizontal */
+    height: auto;
+  }
+  .titulo {
+    margin-top: 480px; /* Ajusta el margen superior en móviles */
+    font-size: 2rem;
+    color: white;
+  }
+
+  .section {
+    position: relative; /* Flujo normal para scroll */
+    height: auto;
+    min-height: 100vh;
+    padding-top: 80px; /* Espacio para navbar fijo */
+  }
+
+  .contacto {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .navbar {
+    flex-direction: row; /* Apila los botones en মোবiles */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar button {
+    font-size: 14px; /* Reduce el tamaño de la fuente en móviles */
+    padding: 8px 12px;
+  }
+
+  #inicio {
+    flex-direction: column; /* Apila los banners verticalmente */
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .banner-half {
+    width: 100%; /* Ocupa todo el ancho en মোবiles */
+    height: 300px; /* Altura fija para los banners en মোবiles */
+  }
+
+  .section h1 {
+    font-size: 3rem; /* Reduce el tamaño del título en móviles */
+    top: 10%; /* Ajusta la posición del título */
+  }
+
+  p {
+    font-size: 18px; 
+    color: antiquewhite;/* Reduce el tamaño de la fuente en móviles */
+  }
+
+  .container {
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%; /* Ocupa todo el ancho en móviles */
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+  }
+
+  .card img {
+    height: 200px; /* Ajusta la altura de las imágenes */
+  }
+}
+
+/* Para pantallas de hasta 480px (móviles más pequeños) */
+@media (max-width: 480px) {
+  .section h1 {
+    font-size: 2.5rem; /* Reduce aún más el tamaño del título en móviles pequeños */
+  }
+
+  .banner-half {
+    height: 200px; /* Reduce la altura de los banners en móviles pequeños */
+  }
+
+  p {
+    font-size: 16px; /* Reduce aún más el tamaño de la fuente en móviles pequeños */
+  }
+}
