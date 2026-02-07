@@ -242,7 +242,7 @@ button:hover {
     height: auto;
   }
   .titulo {
-    margin-top: 550px; /* Ajusta el margen superior en móviles */
+    margin-top: 480px; /* Ajusta el margen superior en móviles */
     font-size: 2rem;
     color: white;
   }
@@ -312,6 +312,11 @@ button:hover {
   .section h1 {
     font-size: 2.5rem; /* Reduce aún más el tamaño del título en móviles pequeños */
   }
+   .titulo {
+    margin-top: 480px; /* Ajusta el margen superior en móviles */
+    font-size: 2rem;
+    color: white;
+   }
 
   .banner-half {
     height: 200px; /* Reduce la altura de los banners en móviles pequeños */
