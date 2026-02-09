@@ -34,15 +34,19 @@ JavaScript – Interactividad y navegación dinámica
 Desde la sección Contacto, es posible comunicarse directamente conmigo a través de WhatsApp, facilitando una comunicación rápida y directa.
 
 📂 Estructura del proyecto
-Copiar código
+
 
 
 /portafolio
+
 │── index.html
+
 │── css/
 │   └── styles.css
+
 │── js/
 │   └── script.js
+
 │── img/
 │   └── imágenes del proyecto
 
